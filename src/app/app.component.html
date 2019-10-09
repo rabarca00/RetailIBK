@@ -1,0 +1,183 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="wrapper">
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Clientes
+        <small></small>
+      </h1>
+
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="box box-info" id="client-table" >
+            <div class="box-header">
+              <h3 class="box-title">Lista de Clientes</h3>
+
+              <div class="box-tools">
+                <button id="new-client" class="btn btn-primary btn-sm" type="button"><i class="fa fa-plus"></i> Nuevo</button>
+                &nbsp;
+                <button id="report-client" class="btn btn-primary btn-sm" type="button"><i class="fa fa-list"></i> Reporte</button>
+                &nbsp;
+                <ul class="pagination pagination-sm no-margin pull-right">
+                  <li id="first" ><a data-page="1" href="#">&laquo;</a></li>
+                  <li><a href="#">1</a></li>
+                  <li id="last" ><a href="#">&raquo;</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <table id="tableP" class="table table-bordered table-striped">
+                <tbody>
+                  <tr id="head" >
+                    <th style="width: 10px">#</th>
+                    <th>Nombres</th>
+                    <th>Apellidos </th>
+                    <th>Fecha de Nacimiento </th>
+                    <th>Edad </th>
+                    <th></th>
+                  </tr>
+                  <tr>
+                    <td>1.</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <button class="btn btn-success btn-xs" type="button">Editar</button>
+                      <button class="btn btn-primary btn-xs" type="button">An&aacute;lisis</button>
+                    </td>
+                  </tr>
+              </tbody>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+        <div class="col-md-6">
+          <div class="box box-info" id="client-detail">
+            <div class="box-header">
+              <h3 class="box-title">An&aacute;lisis de Cliente</h3>
+
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body no-padding">
+              <div class="col-md-8" id="field001">
+                <div class="form-group">
+                  <label for="exampleInputFile">Nombres</label>
+                  <input type="text" class="form-control" id="nombres">
+                </div>
+              </div>
+              <div class="col-md-8" id="field001">
+                <div class="form-group">
+                  <label for="exampleInputFile">Apellidos</label>
+                  <input type="text" class="form-control" id="apellidos">
+                </div>
+              </div>
+              <div class="col-md-5" id="field001">
+                <div class="form-group">
+                  <label for="exampleInputFile">Fecha de Nacimiento</label>
+                  <div class="input-group date">
+                    <div class="input-group-addon">
+                      <i class="fa fa-calendar"></i>
+                    </div>
+                    <input type="text" class="form-control pull-right" id="fechanac">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5" id="field001">
+                <div class="form-group">
+                  <label for="exampleInputFile">Edad</label>
+                  <input type="text" class="form-control" id="edad">
+                </div>
+              </div>
+
+              <div class="col-md-5" id="field003">
+                <div class="form-group">
+                  <label for="exampleInputFile">Expectativa de vida</label>
+                  <div class="input-group date">
+                    <div class="input-group-addon">
+                      <i class="fa fa-calendar"></i>
+                    </div>
+                    <input type="text" disabled class="form-control pull-right" id="fchdec">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+                <button class="btn btn-primary pull-right" type="submit">Grabar</button>
+                <button class="btn btn-default" type="submit">Retroceder</button>
+            </div>  
+
+          </div>
+
+          <div class="box box-info" id="client-report">
+            <div class="box-header">
+              <h3 class="box-title">Reporte de Clientes</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body no-padding">
+       
+              <table class="table table-striped">
+                <tbody>
+                <tr>
+                  <td>Total de Clientes</td>
+                  <td><span id="total" class="badge bg-red">55%</span></td>
+                </tr>
+                <tr>
+                  <td>Edad Promedio</td>
+                  <td><span id="promedio" class="badge bg-yellow">70%</span></td>
+                </tr>
+                <tr>
+                  <td>Desviaci&oacute;n Est&aacute;ndar</td>
+                  <td><span id="stddev" class="badge bg-light-blue">30%</span></td>
+                </tr>
+              </tbody>
+            </table>              
+
+
+
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+                <button class="btn btn-default" type="submit">Retroceder</button>
+            </div>  
+
+          </div>
+
+
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 1.1.0
+    </div>
+    <strong>.</strong>
+  </footer>
+
+
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<router-outlet></router-outlet>

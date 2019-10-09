@@ -1,0 +1,7 @@
+.content-wrapper,
+.main-footer {
+  margin-left: 0px;
+} 
+.fixed .content-wrapper{
+  padding-top: 0px ;
+} 
